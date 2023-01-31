@@ -1,8 +1,14 @@
+html {
+  background-color: #F2AF5C;
+  margin-bottom: 1rem;
+}
+
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
-  margin: 0;
-  padding: 0;
+  background-color: #A6662E;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 h1,
@@ -14,17 +20,34 @@ h6 {
   font-family: 'Stick No Bills', 'Roboto', Helvetica, sans-serif;
 }
 
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* SKIP LINK STYLE */
+
+.skip-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-links a {
+  position: absolute;
+  top: -3em;
+  background-color: black;
+  color: white;
+  padding: 0.5em 1em;
+  font-weight: bold;
+}
+
+.skip-links a:focus {
+  top: 0;
 }
 
 img {
   width: 100%;
 }
 
-.main-nav ul {
+nav {}
+
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -32,16 +55,34 @@ img {
   padding: 0;
 }
 
-.main-nav ul li {
+nav ul li {
   flex: 1;
-  text-align: center;
+  padding: 0px 10px;
+  color: white;
 }
 
-.main-nav ul li a {
+nav ul li:hover {
+  color: black;
+}
+
+nav ul li a {
   display: block;
   color: inherit;
   text-decoration: none;
   font-size: 1.25rem;
+}
+
+main p {
+  color: white;
+}
+
+article ul {
+  color: white;
+
+}
+
+section h1{
+  font-size: 2rem;
 }
 
 form input,
@@ -49,23 +90,51 @@ form textarea {
   display: block;
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 1rem;
+  padding-top: 1rem;
+}
+
+label {
+  color: white;
+  padding-bottom: 3rem;
 }
 
 form textarea {
   min-height: 150px;
   max-height: 150px;
   height: 150px;
-  resize: none;
+  resize: horizontal;
 }
 
 form button {
   background: none;
   border: 2px solid black;
-  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem 4rem;
   text-transform: uppercase;
+  background-color: #D9C0A3;
+  font-size: medium;
+
 }
 
-.site-footer {
+form button:hover {
+  background: none;
+  border: 2px solid black;
+  border-radius: .5rem;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  background-color: green;
+  color: white;
+  font-size: large;
+}
+
+footer {
   padding: 2rem 0;
+  color: white;
+}
+
+
+/* PUTS OWNER INFORMATION IN 2 COLUMNS */
+article {
+  display: flex;
+  justify-content: space-evenly;
 }
